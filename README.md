@@ -2,4 +2,4 @@ To Do List ist ein Projekt, mit dem Sie den Überblick über Ihre Aufgaben behal
 (sie erhält automatisch den Status FAILED), und er kann jede der hinzugefügten Aufgaben als DONE markieren und wenn die Aufgabe irrelevant geworden ist, kann er sie löschen.
 
 Geschrieben in der Programmiersprache Java mit Spring Boot und Thzmeleaf als Template-Engine für die Erzeugung von HTML-Elementen.
-DataBase - MySQL, JPARepository
+Datenverarbeitung - MySQL, JPARepository, Hibernate
