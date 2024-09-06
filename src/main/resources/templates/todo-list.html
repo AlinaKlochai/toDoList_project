@@ -53,14 +53,14 @@
 
         .strikethrough {
             text-decoration: line-through;
-            color: gray;  /* Дополнительно можно изменить цвет текста */
+            color: gray;
         }
     </style>
 </head>
 <body>
 <h1>ToDo List</h1>
 
-<!-- Форма для добавления новой задачи -->
+<!-- Formular zum Hinzufügen einer neuen Aufgabe -->
 <form th:action="@{/todos}" th:object="${newToDo}" method="post">
     <div class="input-group mb-3">
         <input type="text" id="title" th:field="*{title}" class="form-control" placeholder="Enter task title" aria-label="Task title" required />
@@ -68,18 +68,18 @@
     </div>
 </form>
 
-<!-- Список существующих задач -->
+<!-- Liste der bestehenden Aufgaben -->
 <ul>
     <li th:each="todo : ${todos}">
         <span th:text="${todo.title}"
               th:classappend="${todo.done} ? 'strikethrough' : ''"></span>
 
-        <!-- Форма для отметки задачи как выполненной -->
+        <!-- Formular für die Kennzeichnung einer Aufgabe als erledigt -->
         <form th:action="@{/todos/done/{id}(id=${todo.id})}" method="post" style="display:inline">
             <button type="submit" th:disabled="${todo.done}" class="btn btn-outline-success">Done</button>
         </form>
 
-        <!-- Форма для удаления задачи -->
+        <!-- Formular zum Löschen einer Aufgabe -->
         <form th:action="@{/todos/delete/{id}(id=${todo.id})}" method="post" style="display:inline">
             <button type="submit" class="btn btn-outline-danger">Delete</button>
         </form>
