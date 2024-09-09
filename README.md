@@ -4,5 +4,8 @@ ist ein Projekt, mit dem Sie den Überblick über Ihre Aufgaben behalten. Der Be
 
 ## Technology stack
 
-Geschrieben in der Programmiersprache `Java` mit `Spring Boot` und `Thymeleaf` als Template-Engine für die Erzeugung von HTML-Elementen.
+Geschrieben in der Programmiersprache `Java`
+Diese Software basiert auf dem `Spring Boot`-Framework.
+`Thymeleaf` wird für das UI-Rendering verwendet.
+
 Datenverarbeitung - `MySQL`, `JPARepository`, `Hibernate`
